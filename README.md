@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+<h1 align="left">
+  <img src="https://github.com/user-attachments/assets/7f07f0c3-5c37-4aef-844b-4b06256f2a6d" width="40" style="vertical-align: middle;" />
+  ChatPriv
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**ChatPriv** is a ultra-secure, serverless peer-to-peer (P2P) messaging platform. It eliminates the middleman by using WebRTC to establish direct connections between browsers, ensuring your data never touches a central server.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+* **100% Serverless:** No backend database. Messages exist only in the RAM of the connected peers.
+* **WebRTC P2P:** Direct browser-to-browser communication for ultra-low latency and maximum privacy.
+* **End-to-End Obfuscation:** Payloads are processed through an additional XOR security layer before transmission.
+* **Voice Notes:** Integrated P2P audio recording and playback with custom UI.
+* **Self-Destructing Sessions:** Closing the tab or clicking "Destroy Session" wipes all traces of the conversation forever.
+* **No Metadata:** Since there is no central signaling server, no one can track *who* you talked to or *when*.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How It Works
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1.  **Initialize:** The Host generates a secure Invite Link.
+2.  **Handshake:** The Joiner uses the link to generate a Response Token.
+3.  **Connect:** Once the Host applies the Response Token, a direct "Steel Tunnel" is created between both devices.
+4.  **Chat:** Exchange text and voice notes with complete peace of mind.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [React.js](https://reactjs.org/) - Frontend framework
+* [WebRTC](https://webrtc.org/) - Real-time communication protocol
+* [Metered.ca](https://www.metered.ca/) - Global TURN/STUN relay for NAT traversal
 
-### `npm run build`
+## Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Clone the repo:**
+    ```bash
+    git clone [https://github.com/your-username/chatpriv.git](https://github.com/your-username/chatpriv.git)
+    cd chatpriv
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Configure Environment Variables:**
+    Create a `.env` file in the root directory and add your Metered.ca credentials:
+    ```text
+    REACT_APP_USERNAME=your_username
+    REACT_APP_CREDENTIALS=your_secret_credential
+    REACT_APP_URL1=url
+    REACT_APP_URL2=url2
+    ...
+    REACT_APP_URL5=url5<img width="452" height="503" alt="logo192" src="https://github.com/user-attachments/assets/c06c8388-3ded-4108-ab4a-27757b76d437" />
 
-### `npm run eject`
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4.  **Start the app:**
+    ```bash
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Privacy Policy
+ChatPriv does not collect, store, or share any personal data. It does not use cookies or tracking scripts. All communication is strictly between the two connected peers.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
