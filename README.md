@@ -49,8 +49,7 @@
     REACT_APP_URL1=url
     REACT_APP_URL2=url2
     ...
-    REACT_APP_URL5=url5<img width="452" height="503" alt="logo192" src="https://github.com/user-attachments/assets/c06c8388-3ded-4108-ab4a-27757b76d437" />
-
+    REACT_APP_URL5=url5
     ```
 
 4.  **Start the app:**
